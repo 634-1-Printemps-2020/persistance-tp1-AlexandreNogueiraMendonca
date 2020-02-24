@@ -2,7 +2,7 @@ package ch.hesge.cours634.counter;
 
 public class Counter implements ICounter {
 
-    private int cpt;
+    public int cpt;
 
     public Counter() {
         cpt = 0;

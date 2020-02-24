@@ -1,8 +1,7 @@
 package ch.hesge.cours634.counter;
 
 public class UpperLimitedPositiveCounter extends Counter {
-    private int cpt;
-    private int max = 10;
+    private final int MAX = 10;
 
     public UpperLimitedPositiveCounter() {
         super();
@@ -11,7 +10,7 @@ public class UpperLimitedPositiveCounter extends Counter {
     @Override
     public void inc() throws CounterException {
         cpt++;
-        if (cpt > max) {
+        if (cpt > MAX) {
             throw new CounterException();
         }
     }
@@ -19,7 +18,7 @@ public class UpperLimitedPositiveCounter extends Counter {
     @Override
     public void add(int step) throws CounterException {
         cpt +=step;
-        if (cpt > max || cpt < 0) {
+        if (cpt > MAX || cpt < 0) {
             throw new CounterException();
         }
     }

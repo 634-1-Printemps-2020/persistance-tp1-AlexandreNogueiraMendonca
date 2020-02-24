@@ -3,11 +3,12 @@ package ch.hesge.cours634.counter;
 public class Main {
 
     public static void main(String[] args) {
-        int add = -10;
+        int add = 100;
 
         Counter cpt = new Counter();
-        System.out.println("Avant modif de cpt = " + cpt.getValue());
+        UpperLimitedPositiveCounter cptLim = new UpperLimitedPositiveCounter();
         try {
+            System.out.println("Avant modif de cpt = " + cpt.getValue());
             cpt.inc();
             System.out.println("inc de cpt = " + cpt.getValue());
             cpt.add(add);
@@ -15,7 +16,6 @@ public class Main {
 
             System.out.println();
 
-            UpperLimitedPositiveCounter cptLim = new UpperLimitedPositiveCounter();
             System.out.println("Avant modif de cptLim = " + cptLim.getValue());
             cptLim.inc();
             System.out.println("inc de cptLim = " + cptLim.getValue());
